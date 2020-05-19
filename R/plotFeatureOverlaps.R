@@ -7,6 +7,8 @@
 
 plotFeatureOverlaps = function(long_tibble){
 
+  library(ggplot2)
+
   output =
     ggplot(
       long_tibble, aes(x = cathegory, y = nonzero_features_count, fill = Status)) +
