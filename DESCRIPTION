@@ -1,0 +1,15 @@
+Package: omicsWrappers
+Title: wrapper functions for integrating and visualising ChIPseq, ATACseq, Hi-C, pcHi-C and RNAseq data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Adrija",
+           family = "Kalvisa",
+           role = c("aut", "cre"),
+           email = "adrija.kalvisa@bric.ku.dk",
+           comment = c(ORCID = "0000-0002-7811-6316"))
+Description: This package is created to integrate and visualise data from different NGS platforms, with special focus on integraing pcHiC data with epigenetics and transcriptomics. 
+License: `use_mit_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0.9000
