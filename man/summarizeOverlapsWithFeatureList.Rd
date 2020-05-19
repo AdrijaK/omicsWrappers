@@ -20,6 +20,4 @@ outputs the count of overlaps for each GRanges element as a data frame
 }
 \examples{
 TBA
- @export
-a function that counts overlaps between two GRanges objects
 }

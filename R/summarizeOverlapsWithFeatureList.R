@@ -7,7 +7,7 @@
 #' @returns GRanges_query with overlaps from each item in GRangesList_object as a column in mcols()
 #' @examples
 #' TBA
-#'  @export
+#' @export
 
 summarizeOverlapsWithFeatureList = function(GRanges_query, GRangesList_subject) {
 

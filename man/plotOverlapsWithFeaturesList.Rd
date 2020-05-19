@@ -35,5 +35,4 @@ txdb =
 
 promoters_GRCm38_M24_basic = genes(txdb) \%>\% promoters \%>\% as.data.frame
 plotOverlapsWithFeaturesList (promoters_of_expressedGenes, CEBPa)
- @export
 }
