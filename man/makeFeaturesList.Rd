@@ -2,7 +2,7 @@
 % Please edit documentation in R/makeFeaturesList.R
 \name{makeFeaturesList}
 \alias{makeFeaturesList}
-\title{creates a features list from snakePipes ChIP pipeline}
+\title{create a features list from snakePipes ChIP pipeline}
 \usage{
 makeFeaturesList(snakePipesOutputDir)
 }
@@ -13,5 +13,5 @@ makeFeaturesList(snakePipesOutputDir)
 GRangesList object with list items named as \code{peaks_all}, \code{peaks_up}, \code{peaks_down}
 }
 \description{
-creates a features list from snakePipes ChIP pipeline
+create a features list from snakePipes ChIP pipeline
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/loadFilteredResultsAsGRanges.R
 \name{loadFilteredResultsAsGRanges}
 \alias{loadFilteredResultsAsGRanges}
-\title{loads snakePipes Filtered.results.*.bed file as GRanges object, giving appropriate column names}
+\title{load snakePipes Filtered.results.*.bed file as GRanges object with appropriate column names}
 \usage{
 loadFilteredResultsAsGRanges(pathToFile)
 }

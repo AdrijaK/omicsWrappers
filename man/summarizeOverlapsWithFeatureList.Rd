@@ -2,8 +2,7 @@
 % Please edit documentation in R/summarizeOverlapsWithFeatureList.R
 \name{summarizeOverlapsWithFeatureList}
 \alias{summarizeOverlapsWithFeatureList}
-\title{counts overlaps between a GRanges object (query) in each item of GRangesList (many subjects)
-outputs the count of overlaps for each GRanges element as a data frame}
+\title{Summarize overlaps with a feature list}
 \usage{
 summarizeOverlapsWithFeatureList(GRanges_query, GRangesList_subject)
 }

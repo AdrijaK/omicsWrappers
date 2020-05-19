@@ -1,28 +1,28 @@
+#' a wrapper function that plots promoter (GRanges) overlaps with features list (GRangesList):
+#'
+#' 1. count overlaps for each element in GRanges with features stored in `GRangesList_subject` using summarizeOverlapsWithFeatureList
+#' 2. group the mcols of GRanges by status (DOWN/None/UP -regulated)
+#' 3. normalise the counts against the number of genes per group and express that as percentage
+#' 4. subset the `peaks_all`, `peaks_up`, `peaks_down` and convert to long format for ggplot
+#'
+#' plotFeatureOverlaps
+#' @param GRanges_query GRanges object that will be used as a query
+#' @param GRangesList_subject GRangesList object that will be used as a subject
+#' @example
+#'   CEBPa = makeFeaturesList("/localhome/bric/qlr900/analysis/02_MLL/data/chip-seq/DNA-mapping/CSAW_MACS2_CEBPa")
+#'   expressedGenes =  allGenes %>% subset(baseMean > 10)
+#'   find coordinates of promoters of deregulated genes:
+#'    promoters_of_expressedGenes =  left_join(expressedGenes, promoters_GRCm38_M24_basic, by = c("geneID" = "gene_id")) %>% as("GRanges")
+#' # use encode_GRCm38_M24_basic for to make annotation
+#' txdb =
+#'   makeTxDbFromGFF("/scratch/genomes/snakepipes/GRCm38_M24_basic/annotation/genes.gtf",
+#'                   format=c("gtf"),
+#'                   dataSource="gencode_GRCm38_M24_basic")
+#'
+#' promoters_GRCm38_M24_basic = genes(txdb) %>% promoters %>% as.data.frame
+#' plotOverlapsWithFeaturesList (promoters_of_expressedGenes, CEBPa)
+
 plotOverlapsWithFeaturesList = function(GRanges_query, GRangesList_subject){
-  #' a wrapper function that plots promoter (GRanges) overlaps with features list (GRangesList):
-  #'
-  #' 1. count overlaps for each element in GRanges with features stored in `GRangesList_subject` using summarizeOverlapsWithFeatureList
-  #' 2. group the mcols of GRanges by status (DOWN/None/UP -regulated)
-  #' 3. normalise the counts against the number of genes per group and express that as percentage
-  #' 4. subset the `peaks_all`, `peaks_up`, `peaks_down` and convert to long format for ggplot
-  #'
-  #' plotFeatureOverlaps
-  #' @param GRanges_query GRanges object that will be used as a query
-  #' @param GRangesList_subject GRangesList object that will be used as a subject
-  #' @example
-  #'   CEBPa = makeFeaturesList("/localhome/bric/qlr900/analysis/02_MLL/data/chip-seq/DNA-mapping/CSAW_MACS2_CEBPa")
-  #'   expressedGenes =  allGenes %>% subset(baseMean > 10)
-  #'   find coordinates of promoters of deregulated genes:
-  #'    promoters_of_expressedGenes =  left_join(expressedGenes, promoters_GRCm38_M24_basic, by = c("geneID" = "gene_id")) %>% as("GRanges")
-  #' # use encode_GRCm38_M24_basic for to make annotation
-  #' txdb =
-  #'   makeTxDbFromGFF("/scratch/genomes/snakepipes/GRCm38_M24_basic/annotation/genes.gtf",
-  #'                   format=c("gtf"),
-  #'                   dataSource="gencode_GRCm38_M24_basic")
-  #'
-  #' promoters_GRCm38_M24_basic = genes(txdb) %>% promoters %>% as.data.frame
-  #' plotOverlapsWithFeaturesList (promoters_of_expressedGenes, CEBPa)
-  #' @export
 
   # Uncomment for troubleshooting
   # GRanges_query = promoters_of_expressedGenes

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotFeatureOverlaps.R
 \name{plotFeatureOverlaps}
 \alias{plotFeatureOverlaps}
-\title{a wrapper function to plot the overlap counts in a particular way}
+\title{plot the overlaps with features in a particular way}
 \usage{
 plotFeatureOverlaps(long_tibble)
 }

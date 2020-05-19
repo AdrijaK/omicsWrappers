@@ -2,7 +2,7 @@
 % Please edit documentation in R/loadBed6AsGRanges.R
 \name{loadBed6AsGRanges}
 \alias{loadBed6AsGRanges}
-\title{loads snakePipes DiffBinding_allregions.bed BED6 file as GRanges object, giving appropriate column names}
+\title{load snakePipes DiffBinding_allregions.bed BED6 file as GRanges object, giving appropriate column names}
 \usage{
 loadBed6AsGRanges(pathToFile)
 }
@@ -10,5 +10,5 @@ loadBed6AsGRanges(pathToFile)
 \item{pathToFile}{(string) an absolute or relative path to a bed file}
 }
 \description{
-loads snakePipes DiffBinding_allregions.bed BED6 file as GRanges object, giving appropriate column names
+load snakePipes DiffBinding_allregions.bed BED6 file as GRanges object, giving appropriate column names
 }
