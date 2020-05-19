@@ -11,7 +11,6 @@ plotFeatureOverlaps(long_tibble)
 }
 \value{
 ggplot object
-@export
 }
 \description{
 a wrapper function to plot the overlap counts in a particular way

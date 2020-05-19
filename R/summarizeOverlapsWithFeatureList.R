@@ -12,7 +12,7 @@
 summarizeOverlapsWithFeatureList = function(GRanges_query, GRangesList_subject) {
 
   countOverlapsWithFeature = function(x){
-    #' a function that counts overlaps between two GRanges objects
+    # a function that counts overlaps between two GRanges objects
     countOverlaps(GRanges_query, x)
   }
 
