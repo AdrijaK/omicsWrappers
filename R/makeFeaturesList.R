@@ -5,7 +5,6 @@
 #' @example
 #'    snakeDir = "/localhome/bric/qlr900/analysis/02_MLL/data/chip-seq/DNA-mapping/CSAW2_MACS2_H3K27ac"
 #'    makeFeaturesList(snakeDir)
-#'    @export
 
 makeFeaturesList = function(snakePipesOutputDir){
 
