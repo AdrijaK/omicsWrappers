@@ -13,10 +13,10 @@ plotFeatureOverlaps = function(long_tibble){
     ggplot(
       long_tibble, aes(x = cathegory, y = nonzero_features_count, fill = Status)) +
     geom_bar(stat='identity', position = 'dodge') +
-    scale_fill_manual(values=c("deeppink3","lightgray", "navy")) +
-    ggtitle("% of promoters that overlap feature") +
+    scale_fill_manual(values=c("navy","lightgray", "deeppink3")) +
+    ggtitle("% of promoters that overlap the feature") +
     ylim(0,100) +
-    ylab("% of promoters that overlap feature") +
+    ylab("% of promoters") +
     xlab("features")+
     theme_classic()
 
