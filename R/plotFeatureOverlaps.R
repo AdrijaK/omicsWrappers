@@ -12,11 +12,10 @@ plotFeatureOverlaps = function(long_tibble){
       long_tibble, aes(x = cathegory, y = nonzero_features_count, fill = Status)) +
     geom_bar(stat='identity', position = 'dodge') +
     scale_fill_manual(values=c("deeppink3","lightgray", "navy")) +
-    ggtitle("% of expressed gene promoters (baseMean >10) \noverlapping features") +
+    ggtitle("% of promoters that overlap feature") +
     ylim(0,100) +
-    ylab("% of genes overlapping the feature at least once") +
+    ylab("% of promoters that overlap feature") +
     xlab("features")+
-    coord_flip() +
     theme_classic()
 
   return(output)
