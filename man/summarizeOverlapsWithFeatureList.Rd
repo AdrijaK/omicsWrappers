@@ -18,3 +18,8 @@ GRanges_query with overlaps from each item in GRangesList_object as a column in 
 counts overlaps between a GRanges object (query) in each item of GRangesList (many subjects)
 outputs the count of overlaps for each GRanges element as a data frame
 }
+\examples{
+TBA
+ @export
+a function that counts overlaps between two GRanges objects
+}

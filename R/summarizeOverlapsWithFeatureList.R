@@ -5,8 +5,9 @@
 #' @param GRanges_query GRanges object that will be used as a query
 #' @param GRangesList_subject GRangesList object that will be used as a subject
 #' @returns GRanges_query with overlaps from each item in GRangesList_object as a column in mcols()
-#' @example
+#' @examples
 #' TBA
+#'  @export
 
 summarizeOverlapsWithFeatureList = function(GRanges_query, GRangesList_subject) {
 

@@ -8,7 +8,7 @@
 #' plotFeatureOverlaps
 #' @param GRanges_query GRanges object that will be used as a query
 #' @param GRangesList_subject GRangesList object that will be used as a subject
-#' @example
+#' @examples
 #'   CEBPa = makeFeaturesList("/localhome/bric/qlr900/analysis/02_MLL/data/chip-seq/DNA-mapping/CSAW_MACS2_CEBPa")
 #'   expressedGenes =  allGenes %>% subset(baseMean > 10)
 #'   find coordinates of promoters of deregulated genes:
@@ -21,6 +21,7 @@
 #'
 #' promoters_GRCm38_M24_basic = genes(txdb) %>% promoters %>% as.data.frame
 #' plotOverlapsWithFeaturesList (promoters_of_expressedGenes, CEBPa)
+#'  @export
 
 plotOverlapsWithFeaturesList = function(GRanges_query, GRangesList_subject){
 

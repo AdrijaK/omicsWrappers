@@ -15,3 +15,7 @@ GRangesList object with list items named as \code{peaks_all}, \code{peaks_up}, \
 \description{
 create a features list from snakePipes ChIP pipeline
 }
+\examples{
+   snakeDir = "/localhome/bric/qlr900/analysis/02_MLL/data/chip-seq/DNA-mapping/CSAW2_MACS2_H3K27ac"
+   makeFeaturesList(snakeDir)
+}

@@ -22,3 +22,18 @@ plotOverlapsWithFeaturesList(GRanges_query, GRangesList_subject)
 \details{
 plotFeatureOverlaps
 }
+\examples{
+  CEBPa = makeFeaturesList("/localhome/bric/qlr900/analysis/02_MLL/data/chip-seq/DNA-mapping/CSAW_MACS2_CEBPa")
+  expressedGenes =  allGenes \%>\% subset(baseMean > 10)
+  find coordinates of promoters of deregulated genes:
+   promoters_of_expressedGenes =  left_join(expressedGenes, promoters_GRCm38_M24_basic, by = c("geneID" = "gene_id")) \%>\% as("GRanges")
+# use encode_GRCm38_M24_basic for to make annotation
+txdb =
+  makeTxDbFromGFF("/scratch/genomes/snakepipes/GRCm38_M24_basic/annotation/genes.gtf",
+                  format=c("gtf"),
+                  dataSource="gencode_GRCm38_M24_basic")
+
+promoters_GRCm38_M24_basic = genes(txdb) \%>\% promoters \%>\% as.data.frame
+plotOverlapsWithFeaturesList (promoters_of_expressedGenes, CEBPa)
+ @export
+}

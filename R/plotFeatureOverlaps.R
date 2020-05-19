@@ -3,6 +3,7 @@
 #' a wrapper function to plot the overlap counts in a particular way
 #' @param long_tibble a 'long' format tibble with columns names `cathegory`(factor), `nonzero_features_count`(numeric), `Status`(factor)
 #' @returns ggplot object
+#'  @export
 
 plotFeatureOverlaps = function(long_tibble){
 

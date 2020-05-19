@@ -2,6 +2,7 @@
 #'
 #' loads snakePipes Filtered.results.*.bed file as GRanges object, giving appropriate column names
 #' @param pathToFile (string) an absolute or relative path to a file
+#' @export
 
 loadFilteredResultsAsGRanges = function(pathToFile){
 
