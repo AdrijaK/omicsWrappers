@@ -19,7 +19,6 @@ data.frame object containing columns:
 "ENSEMBL": ENSEMBL gene ID (e.g., 'ENSMUSG00000028053')
 "SYMBOL": gene symbol (e.g., 'Ash1l')
 "ENZYME": KEGG enzyme name (e.g., 2.1.1.43)
-
 If the GO term doesnt contain any genes, all columns except "GO" contain <NA>s
 }
 \description{

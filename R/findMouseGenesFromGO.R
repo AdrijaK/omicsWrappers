@@ -16,6 +16,7 @@
 #'
 #' @examples
 #' findMouseGenesFromGO("GO:0070734")
+#' @export
 
 findMouseGenesFromGO =
   function(GOstringOrVector){

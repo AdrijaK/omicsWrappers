@@ -4,6 +4,7 @@
 #' @param KeywordsVector a character string vector of length 2
 #' @example
 #' findGOTerms(c("histone", "H3-K4"))
+#' @export
 
 findGOTerms = function(KeywordsVector){
   library(InterMineR)
