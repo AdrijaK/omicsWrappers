@@ -8,6 +8,11 @@ The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_all), 
 \usage{
 countFeatureSet(GRangesObject, ChipNamesVector)
 }
+\arguments{
+\item{GRangesObject}{...}
+
+\item{ChipNamesVector}{...}
+}
 \value{
 a data.frame with nrows of GRangesObject and ncols of 3*length(listOfChIPs) with counts of overlaps
 }
