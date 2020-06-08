@@ -6,7 +6,15 @@
 #' @param GRangesList_subject GRangesList object that will be used as a subject
 #' @returns GRanges_query with overlaps from each item in GRangesList_object as a column in mcols()
 #' @examples
-#' TBA
+#'
+#' # make a features list from snakePipes chip-seq pipeline output
+#' featuresList = makeFeaturesList("/scratch/adrija/02_MLL/data/chip-seq/DNA-mapping/CSAW_MACS2_CEBPa")
+#'
+#' # make a GRanges query from ATAC peaks
+#' ATAC_peaks = omicsWrappers::loadBed6AsGRanges("/localhome/bric/qlr900/analysis/02_MLL/data/atac/DNA-mapping/CSAW_MACS2_ATAC/DiffBinding_allregions.bed")
+#'
+#' summarize overlaps
+#' summarizeOverlapsWithFeatureList(ATAC_peaks, featuresList)
 #' @export
 
 summarizeOverlapsWithFeatureList = function(GRanges_query, GRangesList_subject) {

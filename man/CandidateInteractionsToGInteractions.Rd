@@ -11,7 +11,7 @@ CandidateInteractionsToGInteractions(
 )
 }
 \arguments{
-\item{chicDiffResultsDataFrame}{(data.frame) Results matrix from Chicdiff pipeline}
+\item{chicDiffResultsDataFrame}{("data.table" or "data.frame") Results dataset from Chicdiff pipeline}
 
 \item{path}{to rmap file that was used upstream in chicago/chicdiff. Rmap file should have four columns: V1:V4 ("chr", "start", "end", "RF_n")}
 }

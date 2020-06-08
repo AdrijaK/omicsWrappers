@@ -1,6 +1,6 @@
 #' CandidateInteractionsToGInteractions
 #' transform Chicdiff CandidateInteractions (data frame) To GInteractions object using rmap
-#' @param chicDiffResultsDataFrame (data.frame) Results matrix from Chicdiff pipeline
+#' @param chicDiffResultsDataFrame ("data.table" or "data.frame") Results dataset from Chicdiff pipeline
 #' @param path to rmap file that was used upstream in chicago/chicdiff. Rmap file should have four columns: V1:V4 ("chr", "start", "end", "RF_n")
 #' @returns GInteractions object with leftover columns forming mcols
 #' @export

@@ -19,5 +19,13 @@ counts overlaps between a GRanges object (query) in each item of GRangesList (ma
 outputs the count of overlaps for each GRanges element as a data frame
 }
 \examples{
-TBA
+
+# make a features list from snakePipes chip-seq pipeline output
+featuresList = makeFeaturesList("/scratch/adrija/02_MLL/data/chip-seq/DNA-mapping/CSAW_MACS2_CEBPa")
+
+# make a GRanges query from ATAC peaks
+ATAC_peaks = omicsWrappers::loadBed6AsGRanges("/localhome/bric/qlr900/analysis/02_MLL/data/atac/DNA-mapping/CSAW_MACS2_ATAC/DiffBinding_allregions.bed")
+
+summarize overlaps
+summarizeOverlapsWithFeatureList(ATAC_peaks, featuresList)
 }

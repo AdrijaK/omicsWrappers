@@ -10,7 +10,7 @@ makeFeaturesList(snakePipesOutputDir)
 \item{snakePipesOutputDir}{(string) name of snakePipes ChIP pipeline output, for example '$PWD/DNA-mapping/CSAW_MACS2_sampleSheetName'}
 }
 \value{
-GRangesList object with list items named as \code{peaks_all}, \code{peaks_up}, \code{peaks_down}
+GRangesList object with list items named as \code{peaks_none}, \code{peaks_up}, \code{peaks_down}
 }
 \description{
 create a features list from snakePipes ChIP pipeline
