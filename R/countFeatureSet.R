@@ -1,6 +1,6 @@
 #' countFeatureSet
 #' counts overlaps between `GRangesObject` and three cathegories of peaks from snakePipes results directory specified by `ChipNamesVector`
-#' The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_all), snakePipesDir/DiffBind_UP.FilteredResults.tsv (peaks_up), snakePipesDir/DiffBind_DOWN.FilteredResults.tsv (peaks_down) <- make correct the filenames
+#' The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_none, which are all peaks minus UP and DOWNregulated peaks), snakePipesDir/DiffBind_UP.FilteredResults.tsv (peaks_up), snakePipesDir/DiffBind_DOWN.FilteredResults.tsv (peaks_down) <- make correct the filenames
 #' @param GRangesObject ...
 #' @param ChipNamesVector ...
 #' @returns a data.frame with nrows of GRangesObject and ncols of 3*length(listOfChIPs) with counts of overlaps

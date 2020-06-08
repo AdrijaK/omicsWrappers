@@ -3,7 +3,7 @@
 #' 1. count overlaps for each element in GRanges with features stored in `GRangesList_subject` using summarizeOverlapsWithFeatureList
 #' 2. group the mcols of GRanges by status (DOWN/None/UP -regulated)
 #' 3. normalise the counts against the number of genes per group and express that as percentage
-#' 4. subset the `peaks_all`, `peaks_up`, `peaks_down` and convert to long format for ggplot
+#' 4. subset the `peaks_none`, `peaks_up`, `peaks_down` and convert to long format for ggplot
 #'
 #' plotFeatureOverlaps
 #' @param GRanges_query GRanges object that will be used as a query
@@ -54,13 +54,13 @@ plotOverlapsWithFeaturesList = function(GRanges_query, GRangesList_subject){
   nonzeroes_by_status_norm_to_n_of_genes =
     nonzeroes_by_status %>%
     dplyr::mutate_at(
-      c("peaks_all", "peaks_up", "peaks_down"),
+      c("peaks_none", "peaks_up", "peaks_down"),
       funs( 100*(. / n_of_genes_per_group))
     ) # find percentage of all genes in this cathegory that overlap this feature at least once.
 
   # subset and convert to long format for ggplot
   nonzeroes_by_status_norm_to_n_of_genes %>%
-    dplyr::select(Status, peaks_all, peaks_up, peaks_down) %>%
+    dplyr::select(Status, peaks_none, peaks_up, peaks_down) %>%
     reshape2::melt(id.vars = c("Status"), variable.name = "cathegory", value.name = "nonzero_features_count") %>%
     plotFeatureOverlaps
 

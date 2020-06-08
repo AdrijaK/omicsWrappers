@@ -17,8 +17,8 @@ makeFeaturesList = function(snakePipesOutputDir){
     )
 
   # modify freatures list so that there is a new item "peaks_none" which harbours all chip peaks that are NOT identified as up- or down-regulated
-  output$peaks_none$isUp  = countOverlaps(output$peaks_all, output$peaks_up)
-  output$peaks_none$isDown = countOverlaps(output$peaks_all, output$peaks_down)
+  output$peaks_none$isUp  = countOverlaps(output$peaks_none, output$peaks_up)
+  output$peaks_none$isDown = countOverlaps(output$peaks_none, output$peaks_down)
   # keep only "nonregulated" peaks in peaks_none
   output$peaks_none = output$peaks_none[(output$peaks_none$isUp + output$peaks_none$isDown) == 0]
 
