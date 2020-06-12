@@ -2,7 +2,8 @@
 #' Find a list of GO terms based on keywords based on constraints "A AND B"
 #' Finds a list of GO terms based on two keywords in the `MouseMine` using `InterMineR` library
 #' @param KeywordsVector a character string vector of length 2
-#' @example #findGOTerms(c("histone", "H3-K4"))
+#' @examples
+#' findGOTerms(c("histone", "H3-K4"))
 #' @export
 
 findGOTerms = function(KeywordsVector){

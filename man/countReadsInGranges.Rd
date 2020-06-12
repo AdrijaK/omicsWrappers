@@ -26,3 +26,11 @@ the output of Rsubread::featureCounts() function (seee ?FeatureCounts 'Value')
 \description{
 countReadsInGranges counts reads in aligned BAM files for regions stored in GRanges by using Rsubread::Featurecounts.
 }
+\examples{
+# count reads for bam files that start with "CEBPa" in the file name
+gr = head(ATAC_peaks)
+snakedir = "/scratch/adrija/02_MLL/data/chip-seq/DNA-mapping/filtered_bam"
+countReadsInGranges(gr, snakedir, "CEBPA",36)
+# count features for all .bam files in the directory
+countReadsInGranges(gr, snakedir, "",36)
+}

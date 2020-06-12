@@ -16,3 +16,6 @@ findGOTerms
 Find a list of GO terms based on keywords based on constraints "A AND B"
 Finds a list of GO terms based on two keywords in the \code{MouseMine} using \code{InterMineR} library
 }
+\examples{
+findGOTerms(c("histone", "H3-K4"))
+}
