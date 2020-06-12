@@ -4,7 +4,7 @@
 \alias{countFeatureSet}
 \title{countFeatureSet
 counts overlaps between \code{GRangesObject} and three cathegories of peaks from snakePipes results directory specified by \code{ChipNamesVector}
-The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_all), snakePipesDir/DiffBind_UP.FilteredResults.tsv (peaks_up), snakePipesDir/DiffBind_DOWN.FilteredResults.tsv (peaks_down) <- make correct the filenames}
+The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_none, which are all peaks minus UP and DOWNregulated peaks), snakePipesDir/DiffBind_UP.FilteredResults.tsv (peaks_up), snakePipesDir/DiffBind_DOWN.FilteredResults.tsv (peaks_down) <- make correct the filenames}
 \usage{
 countFeatureSet(GRangesObject, ChipNamesVector)
 }
@@ -19,5 +19,5 @@ a data.frame with nrows of GRangesObject and ncols of 3*length(listOfChIPs) with
 \description{
 countFeatureSet
 counts overlaps between \code{GRangesObject} and three cathegories of peaks from snakePipes results directory specified by \code{ChipNamesVector}
-The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_all), snakePipesDir/DiffBind_UP.FilteredResults.tsv (peaks_up), snakePipesDir/DiffBind_DOWN.FilteredResults.tsv (peaks_down) <- make correct the filenames
+The three cathegories of peaks are: snakePipesDir/DiffBind_all.tsv (peaks_none, which are all peaks minus UP and DOWNregulated peaks), snakePipesDir/DiffBind_UP.FilteredResults.tsv (peaks_up), snakePipesDir/DiffBind_DOWN.FilteredResults.tsv (peaks_down) <- make correct the filenames
 }

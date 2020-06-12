@@ -16,7 +16,7 @@ plotOverlapsWithFeaturesList(GRanges_query, GRangesList_subject)
 \item count overlaps for each element in GRanges with features stored in \code{GRangesList_subject} using summarizeOverlapsWithFeatureList
 \item group the mcols of GRanges by status (DOWN/None/UP -regulated)
 \item normalise the counts against the number of genes per group and express that as percentage
-\item subset the \code{peaks_all}, \code{peaks_up}, \code{peaks_down} and convert to long format for ggplot
+\item subset the \code{peaks_none}, \code{peaks_up}, \code{peaks_down} and convert to long format for ggplot
 }
 }
 \details{
