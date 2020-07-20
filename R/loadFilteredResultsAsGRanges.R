@@ -11,6 +11,7 @@ loadFilteredResultsAsGRanges = function(pathToFile){
 
   output =
     data.table::fread(pathToFile, col.names = columnNames) %>%
+    dplyr::mutate(start = start+1) %>%
     as("GRanges")
 
   return(output)
